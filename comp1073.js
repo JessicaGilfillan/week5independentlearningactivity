@@ -49,7 +49,7 @@ let alp = {
     lastName: "Akca",
     program: "CP",
     home: "Cyprus",
-    interest: "",
+    interest: ["hiking","swimming","animals"],
     greet: function () {
         alert(`Hi, I am ${this.firstName} ${this.lastName}`);
     },
