@@ -62,12 +62,28 @@ let anmol = {
   }
 };
 
+let kuwar = {
+	firstName: 'Kuwar',
+	lastname: 'Dua',
+	program: 'Computer Programming',
+	home: 'India',
+	interests: ['badminton', 'cricket', 'watches','perfumes'],
+	intro: function(){
+		alert('Hi, I am ' + kuwar.firstName + ' ' + kuwar.lastname);
+	},
+	bio: function(){
+		alert(kuwar.firstName + ' ' + kuwar.lastname + ' is in '  kuwar.program + ' and calls ' + kuwar.home + ' .My interests are ' + kuwar.interests[0] + ' ' + kuwar.interests[1] + ' ' + kuwar.interests[2] + ' ' + kuwar.interests[3])
+	}
+
+};
+
 //add event listener function or event handler property here 
 
 let button = document.getElementById('jess'); 
 let chrisButton = document.getElementById('chris');
 let anmolButton = document.getElementById('anmol');
 let vidhiButton=document.getElementById('vidhi');
+let kuwarButton = document.getElementById('kuwar');
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
@@ -83,3 +99,7 @@ chrisButton.addEventListener('click', function(){
 vidhiButton.addEventListener('click', function(){
   vidhi.bio(); 
 });
+kuwarButton.addEventListener('click', function(){
+	kuwar.bio();
+});
+
