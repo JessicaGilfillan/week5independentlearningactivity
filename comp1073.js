@@ -95,38 +95,41 @@ let kuwar = {
 
 };
 
-let kenColeman = {
-    firstName: "Kenneth",
-    lastName: "Coleman",
-    program: "Computer Programmer",
-    home: "Barrie, ON",
-    interests: ["computers", "playing guitar", "big dogs"],
-    greeting: function () {
-        alert("Hi, I am " + firstName + " " + lastName + ".");
-    },
-    bio: function () {
-        alert("Hi, I am " + kenColeman.firstName + " " + kenColeman.lastName + ". I live in " + kenColeman.home + " and I like " + kenColeman.interests[1] + ".");
-    },
-    peeve: function () {
-        alert("My biggest peeve is evening classes.");
-    }
+let matt = 
+{
+	name:
+	{
+		first: 'Matthew',
+		last: 'Sotera'
+	},
+	age: 31,
+	gender: 'male',	
+	interests: ['adventuring', 'coding', 'snacking', 'hiking', 'sleeping'],
+	program: 'Computer Programmer',
+	location: 'Barrie',
+	bio: function()
+	{
+		alert(matt.name.first + ' ' + 
+			  matt.name.last + ' ' + 'is ' + 
+			  matt.age + ' years old and they like ' + 
+			  matt.interests[0] + ' and ' + 
+			  matt.interests[1] + '.' + ' ' +
+			  matt.name.first + ' is a ' +
+			  matt.program + ' at Georgian College.' + ' ' +
+			  matt.name.first + ' is from ' +
+			  matt.location);
+	},
+	greeting: function()
+	{
+		alert('Hi, my name is' + matt.name.first + ' ' + matt.name.last);
+	}
 };
-
-let kuan = {
-  name: {
-    first: 'Kuan-Wen',
-    last: 'Liu'
-  },
-  program: 'Computer Programmer',
-  home: 'Taiwan',
-  interests: ['sleep', 'playing games', 'watching movie'],
-  greeting: function() {
-    alert('Hi, I am ' + kuan.name.first + ' ' + kuan.name.last);
-  },
-  information: function() {
-    alert('I am interesting in ' + kuan.interests[0] + ' ' + kuan.interests[1], + ' ' + kuan.interests[2]);
-  }
-}
+// add a new object member that display your biggest pet peeve (something that bothers or annoys you)
+let memberName = 'pet peeves';
+let memberValue = ['poor hygiene', 'ignorance'];
+matt[memberName] = memberValue;
+//delete your last name 
+delete matt.name.last;
 
 //add event listener function or event handler property here 
 
@@ -136,9 +139,7 @@ let chrisButton = document.getElementById('chris');
 let anmolButton = document.getElementById('anmol');
 let vidhiButton=document.getElementById('vidhi');
 let kuwarButton = document.getElementById('kuwar');
-let kenButton = document.getElementById('ken');
-let kuanButton = document.getElementById('kuan');
-
+let mattButton = document.getElementById('matt');
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
@@ -160,9 +161,7 @@ vidhiButton.addEventListener('click', function(){
 kuwarButton.addEventListener('click', function(){
 	kuwar.bio();
 });
-kenButton.addEventListener('click', function(){
-  ken.bio(); 
-});
-kuanButton.addEventListener('click', function(){
-  kuan.greeting(); 
-});
+mattButton.addEventListener('click', function())
+{
+	matt.bio;
+}
