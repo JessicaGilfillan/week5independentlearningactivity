@@ -95,6 +95,23 @@ let kuwar = {
 
 };
 
+let kenColeman = {
+    firstName: "Kenneth",
+    lastName: "Coleman",
+    program: "Computer Programmer",
+    home: "Barrie, ON",
+    interests: ["computers", "playing guitar", "big dogs"],
+    greeting: function () {
+        alert("Hi, I am " + firstName + " " + lastName + ".");
+    },
+    bio: function () {
+        alert("Hi, I am " + kenColeman.firstName + " " + kenColeman.lastName + ". I live in " + kenColeman.home + " and I like " + kenColeman.interests[1] + ".");
+    },
+    peeve: function () {
+        alert("My biggest peeve is evening classes.");
+    }
+};
+
 //add event listener function or event handler property here 
 
 let button = document.getElementById('jess'); 
@@ -103,6 +120,8 @@ let chrisButton = document.getElementById('chris');
 let anmolButton = document.getElementById('anmol');
 let vidhiButton=document.getElementById('vidhi');
 let kuwarButton = document.getElementById('kuwar');
+let kenButton = document.getElementById('ken');
+
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
@@ -123,5 +142,8 @@ vidhiButton.addEventListener('click', function(){
 });
 kuwarButton.addEventListener('click', function(){
 	kuwar.bio();
+});
+kenButton.addEventListener('click', function(){
+  ken.bio(); 
 });
 
