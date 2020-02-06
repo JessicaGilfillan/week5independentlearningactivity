@@ -73,7 +73,7 @@ let vidhiButton=document.getElementById('vidhi');
 button.addEventListener('click', function(){
   jess.bio(); 
 });
-button.addEventListener('click', function(){
+anmolButton.addEventListener('click', function(){
   anmol.bio(); 
 });
 
