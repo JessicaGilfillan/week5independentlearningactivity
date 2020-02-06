@@ -147,3 +147,32 @@ kenButton.addEventListener('click', function(){
   ken.bio(); 
 });
 
+// mikemacgregor
+	
+let mikemacgregor = {
+  name: {
+    first: 'Mike',
+    last: 'MacGregor'
+  },
+  program: 'COPR',
+  home: 'Barrie',
+  interests: ['soccer', 'fantasy football', 'comics'],
+  hi: function() {
+    alert('Hi, I am ' + mikemacgregor.name.first + ' ' + mikemacgregor.name.last);
+  },
+  myInfo: function() {
+    var info = JSON.stringify(mikemacgregor);
+    alert(info);
+  }
+};
+
+mikemacgregor.petPeeve = 'my daughter not picking up after herself';
+
+delete mikemacgregor.name.last;
+	
+let buttonMike = document.getElementById('mikemacgregor');
+buttonMike.addEventListener('click', function(){
+	mikemacgregor.myInfo
+});
+	
+// end mikemacgregor
