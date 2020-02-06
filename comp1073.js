@@ -141,36 +141,29 @@ let matt =
 		alert('Hi, my name is' + matt.name.first + ' ' + matt.name.last);
 	}
 };
+
+let kuan = {
+  name: {
+    first: 'Kuan-Wen',
+    last: 'Liu'
+  },
+  program: 'Computer Programmer',
+  home: 'Taiwan',
+  interests: ['sleep', 'playing games', 'watching movie'],
+  greeting: function() {
+    alert('Hi, I am ' + kuan.name.first + ' ' + kuan.name.last);
+  },
+  information: function() {
+    alert('I am interesting in ' + kuan.interests[0] + ' ' + kuan.interests[1], + ' ' + kuan.interests[2]);
+  }
+}
+
 // add a new object member that display your biggest pet peeve (something that bothers or annoys you)
 let memberName = 'pet peeves';
 let memberValue = ['poor hygiene', 'ignorance'];
 matt[memberName] = memberValue;
 //delete your last name 
 delete matt.name.last;
-
-let jamie = {
-	name: {
-		first: 'Jamie',
-		last: 'Malangyaon'
-	},
-	program: 'COPA',
-	home: 'Vaughan',
-	interests: ['cosplay', 'eating', 'meditating', 'apex', 'animal crossing'],
-	bio: function() {
-		alert('Hi, I am ' + jamie.name.first + ' ' + jamie.name.last + '.');
-	},
-	greeting: function() {
-		alert('First Name: ' + jamie.name.first +
-			'\n' + 'Last Name: ' + jamie.name.last + '\n' +
-			'Program: ' + jamie.program + '\n' + 
-			'Interests: ' + jamie.interests)
-	},
-}
-let jamieName = 'petpeeve';
-let jamieValue = ['Messy car'];
-jamie[jamieName] = jamieValue;
-delete jamie.name.last;
-
 
 //add event listener function or event handler property here 
 
@@ -182,6 +175,7 @@ let vidhiButton=document.getElementById('vidhi');
 let kuwarButton = document.getElementById('kuwar');
 let mattButton = document.getElementById('matt');
 let btn= document.getElementById("jeshan");
+let kaunButton = document.getElementById('kuan');
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
@@ -210,6 +204,6 @@ mattButton.addEventListener('click', function())
 			  btn.addEventListener('click', function(){
 	jeshan.bio();
 });
-jamieButton.addEventListener('click', function(){
-	jamie.bio();
+kuanButton.addEventListener('click', function(){
+	kuan.greeting();
 });
