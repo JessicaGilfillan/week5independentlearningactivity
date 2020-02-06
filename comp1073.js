@@ -77,6 +77,35 @@ let kuwar = {
 
 };
 
+let britt = {
+      name:{
+            first: 'Brittany',
+            last: 'Samuels',
+      },
+      program: 'COPR',
+      home:{
+            location: 'Oro-Medonte',
+            home: 'my bedroom',
+      },
+      interests:['making music', 'software develpopment', 'music production', 'djing', 'hockey', 'video games', 'longboarding' ,'skateboard'],
+      hi: function(){
+            let hi = 'hi my name is Brittany! Nice to meeet you';
+            alert(hi);
+      },
+      
+      info: alert(britt.name[0] +  britt.name[1] + britt.program + britt.home[0] + britt.home[1] + britt.insterests[0] + britt.insterests[1] + britt.insterests[2] + britt.insterests[3] + britt.insterests[4] + britt.insterests[5]),
+
+}   
+
+//pet peeve object
+let petPeeve = {
+      petPeeve: 'Ignorance', 
+}
+
+//deleting my last name
+delete britt.last; 
+
+
 //add event listener function or event handler property here 
 
 let button = document.getElementById('jess'); 
@@ -84,6 +113,7 @@ let chrisButton = document.getElementById('chris');
 let anmolButton = document.getElementById('anmol');
 let vidhiButton=document.getElementById('vidhi');
 let kuwarButton = document.getElementById('kuwar');
+let thisButton = document.getElementById('Brittany'); 
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
