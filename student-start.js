@@ -1,10 +1,8 @@
 // JavaScript Document
-/*1.) Create an object to represent you.*/
+//1.) Create an object to represent you.
 
-/*
-
-2.) In your object, add the following members 
-      a.)first name
+/*2.) In your object, add the following members 
+      a.)first name 
       b.)last name
       c.) program 
       d.) where you call home 
@@ -25,29 +23,31 @@
 
 */
 
-let parneet = {
-	name: {
-		first:"Parneet"
-		last:"Kaur"},
+let Avonpreet = {
+name: {
+first:"Avonpreet"
+last:"Kaur"},
 
-		program: 'Computer Programmer',
-		homecountry:'India',
-		interests: ['reading books','watching movies'],
-		
-		greeting: function(){
-			alert('Hi. I am'+parneet.name.first + ' '+ parneet.name.last);
+program: 'Computer Programmer',
+homecountry:'India',
+interests: ['Sleeping','watching serials'],
 
-		},
-		bio: function()
-		{
-			alert(parneet.name.first + ' ' + parneet.name.last +'is enrolled in ' + parneet.program + + '.i am from '+parneet.homecountry+'.i like to'+ parneet.interests[0]+'and'+ parneet.interests[1] );
-	},
-		};
+greeting: function(){
+alert('Hi. I am'+Avonpreet.name.first + ' '+ Avonpreet.name.last);
 
-		let petPeeve ='loud noise';
+},
+bio: function()
+{
+alert(Avonpreet.name.first + ' ' + Avonpreet.name.last +'is enrolled in ' + Avonpreet.program + + '.i am from '+Avonpreet.homecountry+'.i like to'+Avonpreet.interests[0]+'and'+ Avonpreet.interests[1] );
+},
+};
 
-		
+let petPeeve ='loud noise';
+
+
 
 //delete
 
-	delete parneet.name.last;
+delete Avonpreet.name.last;
+
+
