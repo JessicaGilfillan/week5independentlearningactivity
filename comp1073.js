@@ -27,6 +27,23 @@ const chris = {
     }
 }
 
+let jeshan ={ 
+    firstname:'jeshan',
+    age:19,
+    lastname:'chhabra',
+    program:'COPA',
+     home:'india',
+     interests:['playing','music','dance'],
+     bio: function(){
+      alert("i am "+ jeshan.firstname+" "+ jeshan.lastname);
+     },
+    info: function(){
+          alert("i am "+ jeshan.firstname+" "+jeshan.lastname+"."+"i am "+jeshan.age+" years old."+"i was enrolled in "+jeshan.program+"i have intersts in"+jeshan.interests[0])
+    }
+
+}
+
+
 let alp = {
     firstName: "Alp",
     lastName: "Akca",
@@ -124,23 +141,6 @@ let matt =
 		alert('Hi, my name is' + matt.name.first + ' ' + matt.name.last);
 	}
 };
-
-let kuan = {
-  name: {
-    first: 'Kuan-Wen',
-    last: 'Liu'
-  },
-  program: 'Computer Programmer',
-  home: 'Taiwan',
-  interests: ['sleep', 'playing games', 'watching movie'],
-  greeting: function() {
-    alert('Hi, I am ' + kuan.name.first + ' ' + kuan.name.last);
-  },
-  information: function() {
-    alert('I am interesting in ' + kuan.interests[0] + ' ' + kuan.interests[1], + ' ' + kuan.interests[2]);
-  }
-}
-
 // add a new object member that display your biggest pet peeve (something that bothers or annoys you)
 let memberName = 'pet peeves';
 let memberValue = ['poor hygiene', 'ignorance'];
@@ -157,7 +157,7 @@ let anmolButton = document.getElementById('anmol');
 let vidhiButton=document.getElementById('vidhi');
 let kuwarButton = document.getElementById('kuwar');
 let mattButton = document.getElementById('matt');
-let kuanButton = document.getElementById('kuan');
+let btn= document.getElementById("jeshan");
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
@@ -183,6 +183,6 @@ mattButton.addEventListener('click', function())
 {
 	matt.bio;
 }
-kuanButton.addEventListener('click', function(){
-	kuan.greeting();
+			  btn.addEventListener('click', function(){
+	jeshan.bio();
 });
