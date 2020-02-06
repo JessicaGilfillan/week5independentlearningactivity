@@ -165,6 +165,30 @@ matt[memberName] = memberValue;
 //delete your last name 
 delete matt.name.last;
 
+let jamie = {
+	name: {
+		first: 'Jamie',
+		last: 'Malangyaon'
+	},
+	program: 'COPA',
+	home: 'Vaughan',
+	interests: ['cosplay', 'eating', 'meditating', 'apex', 'animal crossing'],
+	bio: function() {
+		alert('Hi, I am ' + jamie.name.first + ' ' + jamie.name.last + '.');
+	},
+	greeting: function() {
+		alert('First Name: ' + jamie.name.first +
+			'\n' + 'Last Name: ' + jamie.name.last + '\n' +
+			'Program: ' + jamie.program + '\n' + 
+			'Interests: ' + jamie.interests)
+	},
+}
+let jamieName = 'petpeeve';
+let jamieValue = ['Messy car'];
+jamie[jamieName] = jamieValue;
+delete jamie.name.last;
+
+
 //add event listener function or event handler property here 
 
 let button = document.getElementById('jess'); 
@@ -176,6 +200,7 @@ let kuwarButton = document.getElementById('kuwar');
 let mattButton = document.getElementById('matt');
 let btn= document.getElementById("jeshan");
 let kaunButton = document.getElementById('kuan');
+let jamieButton = document.getElementById('jamie');
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
@@ -207,3 +232,5 @@ mattButton.addEventListener('click', function())
 kuanButton.addEventListener('click', function(){
 	kuan.greeting();
 });
+jamieButton.addEventListener('click', function(){
+  jamie.bio(); 
