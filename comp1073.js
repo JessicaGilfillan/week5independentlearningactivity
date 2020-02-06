@@ -26,24 +26,6 @@ const chris = {
         alert('My name is ' + chris.fName + ' ' + chris.lName + '. I\'m enrolled in the ' + chris.program + ' program. I live in ' + chris.homeCity + ' where I enjoy ' + chris.interest[0] + ', ' + chris.interest[1] + ', ' + chris.interest[2] + ', and ' + chris.interest[3] + '.')
     }
 }
-
-let alp = {
-    firstName: "Alp",
-    lastName: "Akca",
-    program: "CP",
-    home: "Cyprus",
-    interest: "",
-    greet: function () {
-        alert(`Hi, I am ${this.firstName} ${this.lastName}`);
-    },
-    info: function () {
-        alert(`My program ${this.program}, home: ${this.home}`)
-    }
-};
-
-alp["annoy"] = "headache";
-delete alp.lastName;
-
 let intro;
 intro={
     name:{
@@ -95,40 +77,42 @@ let kuwar = {
 
 };
 
-let kenColeman = {
-    firstName: "Kenneth",
-    lastName: "Coleman",
-    program: "Computer Programmer",
-    home: "Barrie, ON",
-    interests: ["computers", "playing guitar", "big dogs"],
-    greeting: function () {
-        alert("Hi, I am " + firstName + " " + lastName + ".");
-    },
-    bio: function () {
-        alert("Hi, I am " + kenColeman.firstName + " " + kenColeman.lastName + ". I live in " + kenColeman.home + " and I like " + kenColeman.interests[1] + ".");
-    },
-    peeve: function () {
-        alert("My biggest peeve is evening classes.");
-    }
-};
+let jeewan = {
+      firstName: 'Jeewan',
+      lastName: 'Bhusal',
+      program: 'COPR',
+      home: 'Nepal',
+      interests: 'Playing Cricket',
+      info: function(){
+                        alert('Hi, I am ' + jeewan.firstName + ' ' + jeewan.lastName) ;
+      },
+      allInfo:
+            function(){
+                  alert('Hi, I am ' + jeewan.firstName + ' ' + jeewan.lastName + ' .I am from ' + jeewan.home +
+                  '.' + ' I am studying ' + jeewan.program + ' .And I like ' + jeewan.interests);
+            }
+      };
+
+    
+
+
+
+
+
+
 
 //add event listener function or event handler property here 
 
 let button = document.getElementById('jess'); 
-let alpButton = document.getElementById("alp");
 let chrisButton = document.getElementById('chris');
 let anmolButton = document.getElementById('anmol');
 let vidhiButton=document.getElementById('vidhi');
 let kuwarButton = document.getElementById('kuwar');
-let kenButton = document.getElementById('ken');
-
+let jeewanButton = document.getElementById('jeewan');
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
   jess.bio(); 
-});
-alpButton.addEventListener('click', function(){
-    alp.info();
 });
 anmolButton.addEventListener('click', function(){
   anmol.bio(); 
@@ -143,36 +127,5 @@ vidhiButton.addEventListener('click', function(){
 kuwarButton.addEventListener('click', function(){
 	kuwar.bio();
 });
-kenButton.addEventListener('click', function(){
-  ken.bio(); 
-});
 
-// mikemacgregor
-	
-let mikemacgregor = {
-  name: {
-    first: 'Mike',
-    last: 'MacGregor'
-  },
-  program: 'COPR',
-  home: 'Barrie',
-  interests: ['soccer', 'fantasy football', 'comics'],
-  hi: function() {
-    alert('Hi, I am ' + mikemacgregor.name.first + ' ' + mikemacgregor.name.last);
-  },
-  myInfo: function() {
-    var info = JSON.stringify(mikemacgregor);
-    alert(info);
-  }
-};
-
-mikemacgregor.petPeeve = 'my daughter not picking up after herself';
-
-delete mikemacgregor.name.last;
-	
-let buttonMike = document.getElementById('mikemacgregor');
-buttonMike.addEventListener('click', function(){
-	mikemacgregor.myInfo
-});
-	
-// end mikemacgregor
+jeewanButton.addEventListener('click', jeewan.allInfo);
