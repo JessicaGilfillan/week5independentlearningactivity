@@ -13,25 +13,6 @@ const jess = {
   }
 }
 
-let alp = {
-    firstName: "Alp",
-    lastName: "Akca",
-    program: "CP",
-    home: "Cyprus",
-    interest: ["hiking","swimming","animals"],
-    greet: function () {
-        alert(`Hi, I am ${this.firstName} ${this.lastName}`);
-    },
-    info: function () {
-        alert(`My program ${this.program}, home: ${this.home}`)
-    }
-
-};
-
-alp["annoy"] = "headache";
-delete alp.lastName;
-
-
 const chris = {
     fName: 'Chris',
     lName: 'Pander',
@@ -45,6 +26,24 @@ const chris = {
         alert('My name is ' + chris.fName + ' ' + chris.lName + '. I\'m enrolled in the ' + chris.program + ' program. I live in ' + chris.homeCity + ' where I enjoy ' + chris.interest[0] + ', ' + chris.interest[1] + ', ' + chris.interest[2] + ', and ' + chris.interest[3] + '.')
     }
 }
+
+let alp = {
+    firstName: "Alp",
+    lastName: "Akca",
+    program: "CP",
+    home: "Cyprus",
+    interest: "",
+    greet: function () {
+        alert(`Hi, I am ${this.firstName} ${this.lastName}`);
+    },
+    info: function () {
+        alert(`My program ${this.program}, home: ${this.home}`)
+    }
+};
+
+alp["annoy"] = "headache";
+delete alp.lastName;
+
 let intro;
 intro={
     name:{
@@ -93,32 +92,47 @@ let kuwar = {
 	bio: function(){
 		alert(kuwar.firstName + ' ' + kuwar.lastname + ' is in '  kuwar.program + ' and calls ' + kuwar.home + ' .My interests are ' + kuwar.interests[0] + ' ' + kuwar.interests[1] + ' ' + kuwar.interests[2] + ' ' + kuwar.interests[3])
 	}
-
+	
 };
 
-let jeewan = {
-      firstName: 'Jeewan',
-      lastName: 'Bhusal',
-      program: 'COPR',
-      home: 'Nepal',
-      interests: 'Playing Cricket',
-      info: function(){
-                        alert('Hi, I am ' + jeewan.firstName + ' ' + jeewan.lastName) ;
-      },
-      allInfo:
-            function(){
-                  alert('Hi, I am ' + jeewan.firstName + ' ' + jeewan.lastName + ' .I am from ' + jeewan.home +
-                  '.' + ' I am studying ' + jeewan.program + ' .And I like ' + jeewan.interests);
-            }
-      };
+//Create
+kuwar.petpeeve = 'The backstabbers';
 
-    
+//Delete
+delete kuwar.lastname;
 
+let kenColeman = {
+    firstName: "Kenneth",
+    lastName: "Coleman",
+    program: "Computer Programmer",
+    home: "Barrie, ON",
+    interests: ["computers", "playing guitar", "big dogs"],
+    greeting: function () {
+        alert("Hi, I am " + firstName + " " + lastName + ".");
+    },
+    bio: function () {
+        alert("Hi, I am " + kenColeman.firstName + " " + kenColeman.lastName + ". I live in " + kenColeman.home + " and I like " + kenColeman.interests[1] + ".");
+    },
+    peeve: function () {
+        alert("My biggest peeve is evening classes.");
+    }
+};
 
-
-
-
-
+let kuan = {
+  name: {
+    first: 'Kuan-Wen',
+    last: 'Liu'
+  },
+  program: 'Computer Programmer',
+  home: 'Taiwan',
+  interests: ['sleep', 'playing games', 'watching movie'],
+  greeting: function() {
+    alert('Hi, I am ' + kuan.name.first + ' ' + kuan.name.last);
+  },
+  information: function() {
+    alert('I am interesting in ' + kuan.interests[0] + ' ' + kuan.interests[1], + ' ' + kuan.interests[2]);
+  }
+}
 
 //add event listener function or event handler property here 
 
@@ -128,7 +142,9 @@ let chrisButton = document.getElementById('chris');
 let anmolButton = document.getElementById('anmol');
 let vidhiButton=document.getElementById('vidhi');
 let kuwarButton = document.getElementById('kuwar');
-let jeewanButton = document.getElementById('jeewan');
+let kenButton = document.getElementById('ken');
+let kuanButton = document.getElementById('kuan');
+
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
@@ -137,7 +153,6 @@ button.addEventListener('click', function(){
 alpButton.addEventListener('click', function(){
     alp.info();
 });
-
 anmolButton.addEventListener('click', function(){
   anmol.bio(); 
 });
@@ -151,5 +166,9 @@ vidhiButton.addEventListener('click', function(){
 kuwarButton.addEventListener('click', function(){
 	kuwar.bio();
 });
-
-jeewanButton.addEventListener('click', jeewan.allInfo);
+kenButton.addEventListener('click', function(){
+  ken.bio(); 
+});
+kuanButton.addEventListener('click', function(){
+  kuan.greeting(); 
+});
