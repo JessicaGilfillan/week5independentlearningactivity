@@ -13,6 +13,25 @@ const jess = {
   }
 }
 
+let alp = {
+    firstName: "Alp",
+    lastName: "Akca",
+    program: "CP",
+    home: "Cyprus",
+    interest: ["hiking","swimming","animals"],
+    greet: function () {
+        alert(`Hi, I am ${this.firstName} ${this.lastName}`);
+    },
+    info: function () {
+        alert(`My program ${this.program}, home: ${this.home}`)
+    }
+
+};
+
+alp["annoy"] = "headache";
+delete alp.lastName;
+
+
 const chris = {
     fName: 'Chris',
     lName: 'Pander',
@@ -26,24 +45,6 @@ const chris = {
         alert('My name is ' + chris.fName + ' ' + chris.lName + '. I\'m enrolled in the ' + chris.program + ' program. I live in ' + chris.homeCity + ' where I enjoy ' + chris.interest[0] + ', ' + chris.interest[1] + ', ' + chris.interest[2] + ', and ' + chris.interest[3] + '.')
     }
 }
-
-let alp = {
-    firstName: "Alp",
-    lastName: "Akca",
-    program: "CP",
-    home: "Cyprus",
-    interest: "",
-    greet: function () {
-        alert(`Hi, I am ${this.firstName} ${this.lastName}`);
-    },
-    info: function () {
-        alert(`My program ${this.program}, home: ${this.home}`)
-    }
-};
-
-alp["annoy"] = "headache";
-delete alp.lastName;
-
 let intro;
 intro={
     name:{
@@ -95,41 +96,29 @@ let kuwar = {
 
 };
 
-let matt = 
-{
-	name:
-	{
-		first: 'Matthew',
-		last: 'Sotera'
-	},
-	age: 31,
-	gender: 'male',	
-	interests: ['adventuring', 'coding', 'snacking', 'hiking', 'sleeping'],
-	program: 'Computer Programmer',
-	location: 'Barrie',
-	bio: function()
-	{
-		alert(matt.name.first + ' ' + 
-			  matt.name.last + ' ' + 'is ' + 
-			  matt.age + ' years old and they like ' + 
-			  matt.interests[0] + ' and ' + 
-			  matt.interests[1] + '.' + ' ' +
-			  matt.name.first + ' is a ' +
-			  matt.program + ' at Georgian College.' + ' ' +
-			  matt.name.first + ' is from ' +
-			  matt.location);
-	},
-	greeting: function()
-	{
-		alert('Hi, my name is' + matt.name.first + ' ' + matt.name.last);
-	}
-};
-// add a new object member that display your biggest pet peeve (something that bothers or annoys you)
-let memberName = 'pet peeves';
-let memberValue = ['poor hygiene', 'ignorance'];
-matt[memberName] = memberValue;
-//delete your last name 
-delete matt.name.last;
+let jeewan = {
+      firstName: 'Jeewan',
+      lastName: 'Bhusal',
+      program: 'COPR',
+      home: 'Nepal',
+      interests: 'Playing Cricket',
+      info: function(){
+                        alert('Hi, I am ' + jeewan.firstName + ' ' + jeewan.lastName) ;
+      },
+      allInfo:
+            function(){
+                  alert('Hi, I am ' + jeewan.firstName + ' ' + jeewan.lastName + ' .I am from ' + jeewan.home +
+                  '.' + ' I am studying ' + jeewan.program + ' .And I like ' + jeewan.interests);
+            }
+      };
+
+    
+
+
+
+
+
+
 
 //add event listener function or event handler property here 
 
@@ -139,7 +128,7 @@ let chrisButton = document.getElementById('chris');
 let anmolButton = document.getElementById('anmol');
 let vidhiButton=document.getElementById('vidhi');
 let kuwarButton = document.getElementById('kuwar');
-let mattButton = document.getElementById('matt');
+let jeewanButton = document.getElementById('jeewan');
 //button.addEventListener('click', jess.greeting); 
 
 button.addEventListener('click', function(){
@@ -148,6 +137,7 @@ button.addEventListener('click', function(){
 alpButton.addEventListener('click', function(){
     alp.info();
 });
+
 anmolButton.addEventListener('click', function(){
   anmol.bio(); 
 });
@@ -161,7 +151,5 @@ vidhiButton.addEventListener('click', function(){
 kuwarButton.addEventListener('click', function(){
 	kuwar.bio();
 });
-mattButton.addEventListener('click', function())
-{
-	matt.bio;
-}
+
+jeewanButton.addEventListener('click', jeewan.allInfo);
