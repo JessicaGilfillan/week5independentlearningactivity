@@ -142,6 +142,28 @@ let matt =
 	}
 };
 
+// mikemacgregor
+	
+let mikemacgregor = {
+  name: {
+    first: 'Mike',
+    last: 'MacGregor'
+  },
+  program: 'COPR',
+  home: 'Barrie',
+  interests: ['soccer', 'fantasy football', 'comics'],
+  hi: function() {
+    alert('Hi, I am ' + mikemacgregor.name.first + ' ' + mikemacgregor.name.last);
+  },
+  myInfo: function() {
+    var info = JSON.stringify(mikemacgregor);
+    alert(info);
+  }
+};
+mikemacgregor.petPeeve = 'my daughter not picking up after herself';
+delete mikemacgregor.name.last;
+
+
 let kuan = {
   name: {
     first: 'Kuan-Wen',
@@ -199,6 +221,7 @@ let vidhiButton=document.getElementById('vidhi');
 let kuwarButton = document.getElementById('kuwar');
 let mattButton = document.getElementById('matt');
 let btn= document.getElementById("jeshan");
+let buttonMike = document.getElementById('mike');
 let kaunButton = document.getElementById('kuan');
 let jamieButton = document.getElementById('jamie');
 //button.addEventListener('click', jess.greeting); 
@@ -231,6 +254,9 @@ mattButton.addEventListener('click', function())
 });
 kuanButton.addEventListener('click', function(){
 	kuan.greeting();
+});
+buttonMike.addEventListener('click', function(){
+	mikemacgregor.myInfo
 });
 jamieButton.addEventListener('click', function(){
   jamie.bio(); 
