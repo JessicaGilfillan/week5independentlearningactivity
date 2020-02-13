@@ -83,19 +83,15 @@ intro={
 }
 delete intro.name.last;
 
-let anmol = {
-  firstName: 'ANMOL',
-  lastName:  'SHARMA',
-  age: 19,
-  program: 'Computer Programming',
-  interests: ['Songs','Basketball'],
+function anmol(firstName,lastName, age,program){
   Intro: function(){
-    alert('Hi, I am'+anmol.firstName+" "+ anmol.lastName);
-  },
-  Info: function(){
-    alert("Here is my info"+anmol.firstName+" "+anmol.lastName+" "+anmol.age+" "+anmol.program+" "+anmol.interests[0]+" "+anmol.interests[1]);
-  }
+    alert('Hi, I am'+this.firstName+" "+ this.lastName+"my age is "+this.age);
+  };
+ Info: function(){
+    alert("Here is my info"+this.firstName+" "+this.lastName+" "+this.age+" "+this.program);
+  };
 };
+let anmol = new Anmol('ANMOL','SHARMA',19,'COPR')
 
 let kuwar = {
 	firstName: 'Kuwar',
